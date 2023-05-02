@@ -60,7 +60,6 @@ service minimedia /system/bin/minimediaservice
     user media
     group audio camera
     ioprio rt 4
-    setenv LD_PRELOAD /system/lib/libOmxVdec.so
     setenv MINIMEDIA_SENSORSERVER_DISABLE 1
 
 on property:init.svc.sensorservice=running
