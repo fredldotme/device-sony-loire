@@ -60,7 +60,7 @@ service minimedia /system/bin/minimediaservice
     user media
     group audio camera
     ioprio rt 4
-    setenv MINIMEDIA_SENSORSERVER_DISABLE 1
+    onrestart restart camera_service
 
 on property:init.svc.sensorservice=running
     start unblock_wakelock
