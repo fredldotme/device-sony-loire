@@ -6,3 +6,5 @@ if [ -f /cache/recovery/ubuntu_command ]; then
     sync
     reboot -f recovery
 fi
+
+exit 0
