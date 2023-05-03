@@ -86,6 +86,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/halium/usr/share/powerd/device_configs/config-default.xml:system/halium/usr/share/powerd/device_configs/config-default.xml
 
+# Device hacks for Ubuntu Touch
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/system/halium/usr/libexec/lxc-android-config/device-hacks:system/halium/usr/libexec/lxc-android-config/device-hacks
+
 # Ubuntu Touch camera support
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=0

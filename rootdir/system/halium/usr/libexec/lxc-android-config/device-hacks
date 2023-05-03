@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# suzu has trouble landing in the recovery for upgrade installation occasionally.
+# Trigger another reboot from here.
+if [ -f /cache/recovery/ubuntu_command ]; then
+    sync
+    reboot -f recovery
+fi
