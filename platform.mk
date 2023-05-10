@@ -90,6 +90,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/halium/usr/libexec/lxc-android-config/device-hacks:system/halium/usr/libexec/lxc-android-config/device-hacks
 
+# Change systemd shutdown and reboot watchdog timeouts to a reasonable minimum
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/system/halium/usr/lib/systemd/.halium-overlay-dir:system/halium/usr/lib/systemd/.halium-overlay-dir \
+    $(SONY_ROOT)/system/halium/usr/lib/systemd/system.conf.d/suzu.conf:system/halium/usr/lib/systemd/system.conf.d/suzu.conf
+
 # Ubuntu Touch camera support
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=0
@@ -209,7 +214,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #    powerswitch
 
 # Enable libpowerswitch
-PRODUCT_PROPERTY_OVERRIDES += \
-    ubuntu.booster.dl=/system/lib64/libpowerswitch.so \
-    ubuntu.booster.enable=set_screen_on \
-    ubuntu.booster.disable=set_screen_off
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ubuntu.booster.dl=/system/lib64/libpowerswitch.so \
+#    ubuntu.booster.enable=set_screen_on \
+#    ubuntu.booster.disable=set_screen_off
