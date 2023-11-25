@@ -88,7 +88,8 @@ PRODUCT_COPY_FILES += \
 
 # Device hacks for Ubuntu Touch
 PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/halium/usr/libexec/lxc-android-config/device-hacks:system/halium/usr/libexec/lxc-android-config/device-hacks
+    $(SONY_ROOT)/system/halium/usr/libexec/lxc-android-config/device-hacks:system/halium/usr/libexec/lxc-android-config/device-hacks \
+    $(SONY_ROOT)/rootdir/system/halium/etc/profile.d/device-hacks.sh:system/halium/etc/profile.d/device-hacks.sh
 
 # Change systemd shutdown and reboot watchdog timeouts to a reasonable minimum
 PRODUCT_COPY_FILES += \

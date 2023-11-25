@@ -7,4 +7,7 @@ if [ -f /cache/recovery/ubuntu_command ]; then
     reboot -f recovery
 fi
 
+echo 20 > /sys/fs/cgroup/schedtune/schedtune.boost
+echo 1 > /sys/fs/cgroup/schedtune/schedtune.prefer_idle
+
 exit 0
