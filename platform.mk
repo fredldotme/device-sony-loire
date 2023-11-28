@@ -92,11 +92,6 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/halium/etc/profile.d/.halium-overlay-dir:system/halium/etc/profile.d/.halium-overlay-dir \
     $(SONY_ROOT)/system/halium/etc/profile.d/device-hacks.sh:system/halium/etc/profile.d/device-hacks.sh
 
-# Change systemd shutdown and reboot watchdog timeouts to a reasonable minimum
-PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/halium/usr/lib/systemd/.halium-overlay-dir:system/halium/usr/lib/systemd/.halium-overlay-dir \
-    $(SONY_ROOT)/system/halium/usr/lib/systemd/system.conf.d/suzu.conf:system/halium/usr/lib/systemd/system.conf.d/suzu.conf
-
 # Ubuntu Touch camera support
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=0
