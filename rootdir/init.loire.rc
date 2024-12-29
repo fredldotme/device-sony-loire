@@ -33,6 +33,9 @@ on boot
     write /dev/cpuset/system-background/cpus 0-2
     write /dev/cpuset/top-app/cpus 0-5
 
+    # Allow battery charging management
+    chmod 0666 /sys/class/power_supply/battery/charging_enabled
+
 service wpa_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \
